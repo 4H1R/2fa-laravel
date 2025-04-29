@@ -6,6 +6,7 @@ import { FormEventHandler } from 'react';
 import DeleteUser from '@/components/delete-user';
 import HeadingSmall from '@/components/heading-small';
 import InputError from '@/components/input-error';
+import TwoFactorSetup from '@/components/settings/two-factor-setup';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -43,7 +44,6 @@ export default function Profile({ mustVerifyEmail, status }: { mustVerifyEmail: 
     return (
         <AppLayout breadcrumbs={breadcrumbs}>
             <Head title="Profile settings" />
-
             <SettingsLayout>
                 <div className="space-y-6">
                     <HeadingSmall title="Profile information" description="Update your name and email address" />
@@ -119,6 +119,7 @@ export default function Profile({ mustVerifyEmail, status }: { mustVerifyEmail: 
                         </div>
                     </form>
                 </div>
+                <TwoFactorSetup />
                 <DeleteUser />
             </SettingsLayout>
         </AppLayout>
